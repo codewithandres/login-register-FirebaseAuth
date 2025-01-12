@@ -1,13 +1,62 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="./public/xing_3938104.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>web Casua web </title>
+
+
+  <!-- Remix Icon -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div id="app">
+
+    <div class="wrapper">
+      <digv class="header-form">
+        <img src="public/xing_3938104.png" alt="logo" class="form-logo" />
+
+        <h1 class="form-title">Welcomen Back to Cuscana</h1>
+        <p>Enter you username and password to Continue</p>
+    </div>
+
+    <form action="/" class="form">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your Emails adress" />
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" />
+      </div>
+
+      <div class="form-group">
+        <label for="remenber">Remenber me
+          <input type="checkbox" id="remenber" name="remenber" />
+        </label>
+        <a href="#" class="form-link">Forget password?</a>
+      </div>
+
+      <button type="submit" class="botton-signIn form-botton">Sign In</button>
+    </form>
+
+    <div class="form-footer">
+      <hr class="form-hr" />
+      <p>Or sign in with</p>
+
+      <div class="singIn-social">
+        <button class="SignIn-google"><i class="ri-google-fill"></i> Google</button>
+        <button class="signIn-github"><i class="ri-github-fill"></i> Github</button>
+      </div>
+      <p>Don't have an account? <a href="#" class="form-link">Sign Up</a></p>
+    </div>
+
+  </div>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
 </html>
