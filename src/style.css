@@ -21,7 +21,8 @@ body {
   font-weight: bolds;
   font-style: normal;
   font-style: normal;
-  background-image: linear-gradient(to left top, #dde5f0, #e7ebf4, #f0f1f7, #f8f8fb, #ffffff);
+  /* background-image: linear-gradient(to left top, #dde5f0, #e7ebf4, #f0f1f7, #f8f8fb, #ffffff);ssss */
+  box-sizing: border-box;
 }
 
 a {
@@ -35,10 +36,11 @@ a:hover {
 }
 
 body {
-  margin: 0;
+  margin: 0 1rem;
   display: grid;
   place-items: center;
   min-height: 100vh;
+  padding: 0;
 }
 
 :where(h1, h2, h3, h4, h5, h6) {
@@ -47,10 +49,19 @@ body {
 }
 
 .wrapper {
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
   background-color: white;
   padding: 2rem;
   border-radius: .5rem;
+
+  @media screen and (min-width: 768px) {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  }
+
+  @media screen and (max-width: 470px) {
+    padding: 0;
+  }
 }
 
 .wrapper .header-form {
@@ -83,6 +94,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: .5rem;
+  position: relative;
 }
 
 .form-group input {
@@ -105,6 +117,17 @@ body {
   &::placeholder {
     color: hsla(240, 95%, 7%, 0.796);
   }
+
+}
+
+.form-group i.ri-eye-off-fill {
+  position: absolute;
+  font-size: 1.2rem;
+  top: 80%;
+  right: 1rem;
+  transform: translateY(-80%);
+  cursor: pointer;
+  color: #6e7072;
 }
 
 .form-group label {
@@ -115,7 +138,9 @@ body {
 .form .form-check {
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .form .form-botton {
@@ -168,9 +193,14 @@ body {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   margin: 1.5rem 0;
   gap: 1.6rem;
 
+  @media screen and (max-width: 470px) {
+    flex-direction: column;
+
+  }
 }
 
 .singIn-social button {
