@@ -63,9 +63,27 @@ body {
   }
 }
 
-.container-form-login {
+:where(.container-form-login, .container-form-register, .container-form-forgotPassword) {
   width: 100%;
   max-width: 400px;
+}
+
+.container-form-forgotPassword .header-form {
+  position: relative;
+  padding-top: 5rem;
+}
+
+.container-form-forgotPassword .header-form button {
+  position: absolute;
+  top: 0%;
+  left: 0;
+  background-color: transparent;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  font-weight: 600;
+  font-family: inherit;
+  color: hsl(228, 22%, 13%);
 }
 
 .wrapper .header-form {
@@ -252,6 +270,10 @@ body {
 .form-link {
   margin-block: 1rem;
   text-align: center;
+}
+
+.hidden {
+  display: none;
 }
 
 /* .singIn-social button:hover {
