@@ -50,18 +50,22 @@ body {
 
 .wrapper {
   width: 100%;
-  max-width: 400px;
+  max-width: 1000px;
   background-color: white;
   padding: 2rem;
   border-radius: .5rem;
-
-  @media screen and (min-width: 768px) {
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-  }
+  overflow: hidden;
+  display: flex;
+  gap: 3rem;
 
   @media screen and (max-width: 470px) {
     padding: 0;
   }
+}
+
+.container-form-login {
+  width: 100%;
+  max-width: 400px;
 }
 
 .wrapper .header-form {
@@ -79,7 +83,7 @@ body {
 }
 
 .header-form p {
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .form {
@@ -189,6 +193,19 @@ body {
   font-weight: 600;
 }
 
+.container-form-register .form-hr::before {
+  content: "Or sign up with";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding-inline: .5rem;
+  font-size: 1rem;
+  color: hsl(228, 22%, 13%);
+  font-weight: 600;
+}
+
 .singIn-social {
   width: 100%;
   display: flex;
@@ -206,6 +223,8 @@ body {
 .singIn-social button {
   flex: 1;
   gap: 1rem;
+  justify-content: center;
+  align-items: center;
   padding: .7rem 0;
   border: none;
   border-radius: .3rem;
@@ -214,11 +233,20 @@ body {
   font-weight: 500;
   cursor: pointer;
   transition: 200ms ease-out;
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
 
 .singIn-social button i {
   font-size: 1.3rem;
+
+  &.ri-google-fill {
+    color: hsl(5, 69%, 54%);
+  }
+
+  &.ri-github-fill {
+    color: hsl(221, 100%, 54%);
+
+  }
 }
 
 .form-link {
