@@ -176,6 +176,13 @@ body {
 
 }
 
+.form-group.error input {
+  outline: none;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(197, 142, 142, 0.15) 0px 0px 0px 1px,
+    rgba(255, 0, 0, 0.3) 0px 0px 0px 3px;
+}
+
 .form-group i.ri-eye-off-fill {
   position: absolute;
   font-size: 1.2rem;
