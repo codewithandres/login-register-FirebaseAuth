@@ -9,7 +9,7 @@ const validateEmail = (inputEmail: HTMLInputElement): boolean => {
         return true;
     } else {
         inputEmail.closest('.form-group')?.classList.add('error');
-        throw new Error('El correo es Incorrecto')
+        return false
     }
 }
 
