@@ -45,7 +45,7 @@ linkSingUp.addEventListener('click', event => {
 
     containerFormSingIn?.classList.add('hidden');
     containerFormSingUp?.classList.remove('hidden');
-    containerFormSingUp?.classList.add('animate__animated', 'animate__backInUp');
+    containerFormSingUp?.classList.add('animate__animated', 'animate__flipInY');
 
 })
 
@@ -54,6 +54,20 @@ linkSingIn.addEventListener('click', event => {
 
     containerFormSingIn?.classList.remove('hidden');
     containerFormSingUp?.classList.add('hidden');
-    containerFormSingIn?.classList.add('animate__animated', 'animate__backInDown');
+    containerFormSingIn?.classList.add('animate__animated', 'animate__flipInY');
 })
 
+document.querySelectorAll('.ri-eye-off-fill').forEach(icon => { 
+    icon.addEventListener('click', () => {
+        const input = icon.previousElementSibling as HTMLInputElement;
+        if (input.type === 'password') {
+            input.type = 'text';
+            icon.classList.remove('ri-eye-off-fill');
+            icon.classList.add('ri-eye-fill');
+        } else {
+            input.type = 'password';
+            icon.classList.remove('ri-eye-fill');
+            icon.classList.add('ri-eye-off-fill');
+        }
+    })
+})
