@@ -9,6 +9,7 @@ const containerFormSingIn = document.querySelector('.container-form-login');
 
 const linkSingUp = document.querySelector('.form-link a.singUp') as HTMLAnchorElement;
 const linkSingIn = document.querySelector('.form-link a.singIn') as HTMLAnchorElement;
+
 formsingIn.addEventListener('keyup', (event: KeyboardEvent) => {
 
     const target = event.target as HTMLInputElement
@@ -55,3 +56,4 @@ linkSingIn.addEventListener('click', event => {
     containerFormSingUp?.classList.add('hidden');
     containerFormSingIn?.classList.add('animate__animated', 'animate__backInDown');
 })
+
