@@ -186,7 +186,7 @@ body {
     rgba(255, 0, 0, 0.3) 0px 0px 0px 3px;
 }
 
-.form-group i.ri-eye-off-fill {
+.form-group i.ri-eye-off-fill, .form-group i.ri-eye-fill {
   position: absolute;
   font-size: 1.2rem;
   top: 80%;
@@ -291,24 +291,18 @@ body {
   border: none;
   border-radius: .3rem;
   background-color: transparent;
+  color: hwb(210 43% 55%);
   font-size: 1rem;
   font-weight: 500;
   cursor: pointer;
   transition: 200ms ease-out;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  font-family: 'nunito sans', sans-serif;
 }
 
 .singIn-social button i {
   font-size: 1.3rem;
-
-  &.ri-google-fill {
-    color: hsl(5, 69%, 54%);
-  }
-
-  &.ri-github-fill {
-    color: hsl(221, 100%, 54%);
-
-  }
+  color: hwb(214 4% 93%);
 }
 
 .form-link {
