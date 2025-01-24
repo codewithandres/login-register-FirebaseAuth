@@ -11,9 +11,10 @@ const linkSingUp = document.querySelector('.form-link a.singUp') as HTMLAnchorEl
 const linkSingIn = document.querySelector('.form-link a.singIn') as HTMLAnchorElement;
 
 formsingIn.addEventListener('keyup', (event: KeyboardEvent) => {
+    if (!event.target || (event.target as HTMLElement).tagName !== 'INPUT') return;
+
 
     const target = event.target as HTMLInputElement
-
 
     if (target.tagName !== 'INPUT') return;
 
@@ -25,17 +26,19 @@ formsingIn.addEventListener('keyup', (event: KeyboardEvent) => {
 bottonFormSignIn?.addEventListener('click', event => {
     event.preventDefault();
 
-    if (validateEmail(formsingIn.email)) {
-        const errorMessage = validateEmail(formsingIn.email);
-        console.log(errorMessage)
-    };
-
-
-    if (validatePassword(formsingIn.password)) {
-        const errorMessage = validatePassword(formsingIn.password);
-        console.log(errorMessage)
-    }
     const { email, password } = formsingIn;
+
+
+    if (!validateEmail(email)) {
+       
+        console.log('Infresa un email valido')
+    } ;
+
+
+    if (!validatePassword(password)) {
+       
+        console.log('Igresa una contraseña valida'); 
+    }
 
     console.log(email.value, password.value);
 })
