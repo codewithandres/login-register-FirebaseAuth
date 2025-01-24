@@ -21,13 +21,99 @@
                 <span>Add Music</span>
             </button>
 
-            <button class="header__togle" id="header__togle"> 
+            <button class="header__togle" id="header__togle">
                 <i class="ri-menu-2-fill"></i>
             </button>
         </div>
     </header>
 
-    <nav class="sidebar" id="sidebar"></nav>
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar__container">
+            <div class="sidebar__user">
+                <div class="sidebar__img">
+                    <img src="public/logo_para_mi_aplicacion_web_de_musica.jpeg" alt="Foto del uusario" loading="lazy"
+                        width="50" height="50">
+                </div>
+
+                <div class="sidebar__info">
+                    <h3>Andres Guzman</h3>
+                    <span>Andresdev2024@gmail.com</span>
+                </div>
+            </div>
+
+            <div class="sidebar__content">
+                <div>
+                    <h3 class="sidebar__title">Discover</h3>
+
+                    <div class="siderbar__list">
+                        <a href="#" class="sidebar__link">
+                            <i class="ri-play-circle-line"></i>
+                            <span>Listen Now</span>
+                        </a>
+
+                        <a href="#" class="sidebar__link">
+                            <i class="ri-search-2-line"></i>
+                            <span>Browses</span>
+                        </a>
+                        <a href="#" class="sidebar__link">
+                            <i class="ri-rfid-line"></i>
+                            <span>Radio</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="sidebar__title">Library</h3>
+
+                    <div class="siderbar__list">
+                        <a href="#" class="sidebar__link">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="mr-2 h-4 w-4">
+                                <path d="M21 15V6"></path>
+                                <path d="M18.5 18a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"></path>
+                                <path d="M12 12H3"></path>
+                                <path d="M16 6H3"></path>
+                                <path d="M12 18H3"></path>
+                            </svg>
+                            <span>Playlist</span>
+                        </a>
+
+                        <a href="#" class="sidebar__link">
+                            <i class="ri-music-line"></i>
+                            <span>songs</span>
+                        </a>
+
+                        <a href="#" class="sidebar__link">
+                            <i class="ri-user-line"></i>
+                            <span>Made For You </span>
+                        </a>
+
+                        <a href="#" class="sidebar__link">
+                            <i class="ri-mic-line"></i>
+                            <span>Artist</span>
+                        </a>
+
+                        <a href="#" class="sidebar__link">
+                            <i class="ri-album-line"></i>
+                            <span>Albums</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar__actions">
+                <button> 
+                    <i class="ri-moon-clear-line sidebar-theme" id="theme-botton"></i>
+                    <span>Theme </span>
+                </button>
+
+                <button class="sidebar__link"> 
+                    <i class="ri-logout-circle-r-line"></i>
+                    <span>Log Out</span>
+                </button>
+            </div>
+        </div>
+    </nav>
 
     <main class="main container" id="main"></main>
 </body>
