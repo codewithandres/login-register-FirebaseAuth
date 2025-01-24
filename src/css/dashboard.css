@@ -46,6 +46,7 @@ body {
     background-color: var(--body-color);
     color: var(--text-color);
     transition: background-color .4s;
+    place-items: initial;
 }
 
 a {
