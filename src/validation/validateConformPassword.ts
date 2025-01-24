@@ -4,15 +4,16 @@ interface ValidateConformPasswordParams {
     inputPassowrd: HTMLInputElement;
 }
 
-const validateConformPassword = ({ inputConfirmPassowrd, inputPassowrd }: ValidateConformPasswordParams) => {
-    console.log(inputConfirmPassowrd.value, inputPassowrd.value)
+const validateConformPassword = (
+    { inputConfirmPassowrd, inputPassowrd }: ValidateConformPasswordParams 
+) => {
 
-    if (inputConfirmPassowrd.value.trim() !== inputPassowrd.value.trim()) {
+    if (inputConfirmPassowrd.value.trim() === inputPassowrd.value.trim()) {
 
-        inputConfirmPassowrd.closest('.form-group')?.classList.add('error');
+        inputConfirmPassowrd.closest('.form-group')?.classList.remove('error');
         return true;
     } else {
-        inputConfirmPassowrd.closest('.form-group')?.classList.remove('error');
+        inputConfirmPassowrd.closest('.form-group')?.classList.add('error');
         return false;
     }
 }
