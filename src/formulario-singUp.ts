@@ -10,7 +10,7 @@ const bottonFormSingUp = document.querySelector('.botton-signUp') as HTMLButtonE
 formsingUp.addEventListener('keyup', (event: KeyboardEvent) => {
     if (!event.target || (event.target as HTMLElement).tagName !== 'INPUT') return;
 
-    
+
     const target = event.target as HTMLInputElement;
 
     if (target.name === 'names') return validateName(target);
@@ -30,5 +30,20 @@ bottonFormSingUp.addEventListener('click', event => {
 
     const { names, email, password, RepeatPassword } = formsingUp;
 
-    console.log(email.value, password.value, RepeatPassword.value, names.value);
+
+    if (!validateName(names)) {
+        console.log('error en el nombre');
+    }
+
+    if (!validateEmail(email)) {
+        console.log('email invalido');
+    }
+
+    if (!validatePassword(password)) {
+        console.log('password invalido');
+    }
+
+    if (!validateConformPassword({ inputConfirmPassowrd: RepeatPassword, inputPassowrd: password })) {
+        console.log('password no coinciden');
+    }
 })
