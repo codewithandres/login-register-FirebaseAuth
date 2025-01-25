@@ -10,7 +10,7 @@ const containerFormSingIn = document.querySelector('.container-form-login');
 const linkSingUp = document.querySelector('.form-link a.singUp') as HTMLAnchorElement;
 const linkSingIn = document.querySelector('.form-link a.singIn') as HTMLAnchorElement;
 
-formsingIn.addEventListener('keyup', (event: KeyboardEvent) => {
+formsingIn?.addEventListener('keyup', event => {
     if (!event.target || (event.target as HTMLElement).tagName !== 'INPUT') return;
 
 
@@ -30,14 +30,14 @@ bottonFormSignIn?.addEventListener('click', event => {
 
 
     if (!validateEmail(email)) {
-       
+
         console.log('Infresa un email valido')
-    } ;
+    };
 
 
     if (!validatePassword(password)) {
-       
-        console.log('Igresa una contraseña valida'); 
+
+        console.log('Igresa una contraseña valida');
     }
 
     console.log(email.value, password.value);
@@ -60,7 +60,7 @@ linkSingIn.addEventListener('click', event => {
     containerFormSingIn?.classList.add('animate__animated', 'animate__flipInY');
 })
 
-document.querySelectorAll('.ri-eye-off-fill').forEach(icon => { 
+document.querySelectorAll('.ri-eye-off-fill').forEach(icon => {
     icon.addEventListener('click', () => {
         const input = icon.previousElementSibling as HTMLInputElement;
         if (input.type === 'password') {
