@@ -1,8 +1,9 @@
-
+// importacion de estilos
 import 'animate.css'
+import '@/css/root.css';
+import '@/css/dashboard.css';
+import '@/css/index.css';
 
-import '@/style.css';
-
+// importacion de componentes
 import '@/formulario'
-
 import '@/formulario-singUp'
