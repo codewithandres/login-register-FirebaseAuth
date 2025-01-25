@@ -209,3 +209,6 @@ button {
 
     ;
 }
+.show-sidebar { 
+    left: 0;
+}
