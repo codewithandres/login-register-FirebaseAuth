@@ -1,14 +1,16 @@
 
-import { formsingIn } from "@/constans";
+
 import { validateEmail } from "@/validation/validatyeEmail";
 import { validatePassword } from "@/validation/validatePassword";
 
-const bottonFormSignIn = document.getElementById('botton-signIn');
-const containerFormSingUp = document.querySelector('.container-form-register');
-const containerFormSingIn = document.querySelector('.container-form-login');
 
-const linkSingUp = document.querySelector('.form-link a.singUp') as HTMLAnchorElement;
-const linkSingIn = document.querySelector('.form-link a.singIn') as HTMLAnchorElement;
+import FunctionlinkSinUp from "./handlers/linkSingUp";
+import FunctionlinkSingIn from "./handlers/linkSingIn";
+
+import { formsingIn, iconEye } from "./constans";
+
+const bottonFormSignIn = document.getElementById('botton-signIn');
+
 
 formsingIn?.addEventListener('keyup', event => {
     if (!event.target || (event.target as HTMLElement).tagName !== 'INPUT') return;
@@ -43,24 +45,11 @@ bottonFormSignIn?.addEventListener('click', event => {
     console.log(email.value, password.value);
 })
 
-linkSingUp.addEventListener('click', event => {
-    event.preventDefault();
+FunctionlinkSinUp();
 
-    containerFormSingIn?.classList.add('hidden');
-    containerFormSingUp?.classList.remove('hidden');
-    containerFormSingUp?.classList.add('animate__animated', 'animate__flipInY');
+FunctionlinkSingIn()
 
-})
-
-linkSingIn.addEventListener('click', event => {
-    event.preventDefault();
-
-    containerFormSingIn?.classList.remove('hidden');
-    containerFormSingUp?.classList.add('hidden');
-    containerFormSingIn?.classList.add('animate__animated', 'animate__flipInY');
-})
-
-document.querySelectorAll('.ri-eye-off-fill').forEach(icon => {
+iconEye.forEach(icon => {
     icon.addEventListener('click', () => {
         const input = icon.previousElementSibling as HTMLInputElement;
         if (input.type === 'password') {
