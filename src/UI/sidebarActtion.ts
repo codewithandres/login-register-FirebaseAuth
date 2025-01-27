@@ -6,7 +6,7 @@ interface showSlidebarPro {
 }
 
 
-export const showSlidebar = ({ toggleId, sidebarId, mainId }: showSlidebarPro) => {
+const showSlidebar = ({ toggleId, sidebarId, mainId }: showSlidebarPro) => {
 
     const toggle = document.getElementById(toggleId);
     const sidebar = document.getElementById(sidebarId);
@@ -22,16 +22,8 @@ export const showSlidebar = ({ toggleId, sidebarId, mainId }: showSlidebarPro) =
 
         main?.classList.toggle('main-pd')
     })
-} 
-
-
-const SelectorSidebar = {
-    toggleId: 'header__togle',
-    sidebarId: 'sidebar',
-    mainId: 'main'
 }
 
-showSlidebar(SelectorSidebar)
+export default showSlidebar;
 
 
-console.log('hwllo script ');
