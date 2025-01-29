@@ -30,13 +30,14 @@ body.dark-theme {
     --body-color: hsl(228, 24%, 16%);
     --shadow-color: hsla(228, 80%, 4%, .3);
 }
-.dark-theme .sidebar__content::-webkit-scrollbar { 
+
+.dark-theme .sidebar__content::-webkit-scrollbar {
     background-color: hsl(228, 16%, 30%);
 }
 
 .dark-theme .sidebar__content::-webkit-scrollbar-thumb {
     background-color: hsl(228, 16%, 40%);
-} 
+}
 
 a {
     text-decoration: none;
@@ -240,5 +241,41 @@ button {
         width: 3px;
         height: 20px;
         background-color: var(--first-color);
+    }
+}
+
+@media screen and (min-width: 360px) {
+    .header__container {
+        padding-inline: 1rem;
+    }
+
+    .sidebar {
+        width: max-content;
+    }
+
+    :where(.sidebar__info, .sidebar__link span) {
+        display: none;
+    }
+
+    :where(.sidebar__user, .siderbar__list, .sidebar__actions) {
+        justify-content: center;
+    }
+
+    :where(.sidebar__user, .siderbar__link) {
+
+        grid-template-columns: max-content;
+    }
+
+    .sidebar__user {
+        padding: 0;
+
+    }
+    .sidebar__link { 
+        padding-inline: 2rem;
+    }
+    .sidebar__title { 
+        padding-inline: .5rem;
+        margin-inline: auto;
+
     }
 }
