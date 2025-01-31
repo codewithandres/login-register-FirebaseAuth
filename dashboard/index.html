@@ -14,98 +14,104 @@
 <body>
     <header class="header" id="header">
         <div class="header__container">
-            <button class="header__button">
-                <i class="ri-music-ai-fill"></i>
-                <span>Add Music</span>
-            </button>
+            <a href="#" class="header__logo">
+                <i class="ri-cloud-fill"></i>
+                <span>Cloud</span>
+            </a>
 
-            <button class="header__togle" id="header__togle">
-                <i class="ri-menu-2-fill"></i>
+            <button class="header__toggle" id="header-toggle">
+                <i class="ri-menu-line"></i>
             </button>
         </div>
     </header>
 
+    <!--=============== SIDEBAR ===============-->
     <nav class="sidebar" id="sidebar">
         <div class="sidebar__container">
             <div class="sidebar__user">
                 <div class="sidebar__img">
-                    <img src="../public/logo_para_mi_aplicacion_web_de_musica.jpeg" alt="Foto del uusario"
-                        loading="lazy" width="50" height="50">
+                    <!-- <img src="assets/img/perfil.png" alt="image"> -->
                 </div>
 
                 <div class="sidebar__info">
-                    <h3>Andres Guzman</h3>
-                    <span>Andresdev2024@gmail.com</span>
+                    <h3>Rix Methil</h3>
+                    <span>rix123@email.com</span>
                 </div>
             </div>
 
             <div class="sidebar__content">
                 <div>
-                    <h3 class="sidebar__title">Discover</h3>
+                    <h3 class="sidebar__title">MANAGE</h3>
 
-                    <div class="siderbar__list">
-                        <a href="#" class="sidebar__link">
-                            <i class="ri-play-circle-line"></i>
-                            <span>Listen Now</span>
+                    <div class="sidebar__list">
+                        <a href="#" class="sidebar__link active-link">
+                            <i class="ri-pie-chart-2-fill"></i>
+                            <span>Dashboard</span>
                         </a>
 
                         <a href="#" class="sidebar__link">
-                            <i class="ri-search-2-line"></i>
-                            <span>Browses</span>
+                            <i class="ri-wallet-3-fill"></i>
+                            <span>My Wallet</span>
                         </a>
+
                         <a href="#" class="sidebar__link">
-                            <i class="ri-rfid-line"></i>
-                            <span>Radio</span>
+                            <i class="ri-calendar-fill"></i>
+                            <span>Calendar</span>
+                        </a>
+
+                        <a href="#" class="sidebar__link">
+                            <i class="ri-arrow-up-down-line"></i>
+                            <span>Recent Transactions</span>
+                        </a>
+
+                        <a href="#" class="sidebar__link">
+                            <i class="ri-bar-chart-box-fill"></i>
+                            <span>Statistics</span>
                         </a>
                     </div>
                 </div>
 
                 <div>
-                    <h3 class="sidebar__title">Library</h3>
+                    <h3 class="sidebar__title">SETTINGS</h3>
 
-                    <div class="siderbar__list">
+                    <div class="sidebar__list">
                         <a href="#" class="sidebar__link">
-                            <i class="ri-menu-unfold-2-line"></i>
-                            <span>Playlist</span>
+                            <i class="ri-settings-3-fill"></i>
+                            <span>Settings</span>
                         </a>
 
                         <a href="#" class="sidebar__link">
-                            <i class="ri-music-line"></i>
-                            <span>songs</span>
+                            <i class="ri-mail-unread-fill"></i>
+                            <span>My Messages</span>
                         </a>
 
                         <a href="#" class="sidebar__link">
-                            <i class="ri-user-line"></i>
-                            <span>Made For You </span>
+                            <i class="ri-notification-2-fill"></i>
+                            <span>Notifications</span>
                         </a>
-
-                        <a href="#" class="sidebar__link">
-                            <i class="ri-mic-line"></i>
-                            <span>Artist</span>
-                        </a>
-
-                        <a href="#" class="sidebar__link">
-                            <i class="ri-album-line"></i>
-                            <span>Albums</span>
                     </div>
                 </div>
             </div>
 
             <div class="sidebar__actions">
-                <button >
-                    <i class="ri-moon-clear-line sidebar-theme" id="theme-botton"></i>
-                    <span>Theme </span>
+                <button>
+                    <i class="ri-moon-clear-fill sidebar__link sidebar__theme" id="theme-button">
+                        <span>Theme</span>
+                    </i>
                 </button>
 
-                <button>
-                    <i class="ri-logout-circle-r-line"></i>
+                <button class="sidebar__link">
+                    <i class="ri-logout-box-r-fill"></i>
                     <span>Log Out</span>
                 </button>
             </div>
         </div>
     </nav>
 
-    <main class="main container" id="main"></main>
+    <!--=============== MAIN ===============-->
+    <main class="main container" id="main">
+        <h1>Sidebar Menu</h1>
+    </main>
 
     <script type="module" src="./index.ts"></script>
 </body>

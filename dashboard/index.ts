@@ -7,7 +7,7 @@ import '../src/UI/darkMode';
 import showSlidebar from '../src/UI/sidebarActtion';
 
 const SelectorSidebar = {
-    toggleId: 'header__togle',
+    toggleId: 'header-toggle',
     sidebarId: 'sidebar',
     mainId: 'main'
 }

@@ -1,4 +1,4 @@
-const themeButton = document.getElementById('theme-botton');
+const themeButton = document.getElementById('theme-button');
 const darkTheme: string = 'dark-theme';
 const iconTheme: string = 'ri-sun-line';
 
