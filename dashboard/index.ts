@@ -9,7 +9,8 @@ import showSlidebar from '../src/UI/sidebarActtion';
 const SelectorSidebar = {
     toggleId: 'header-toggle',
     sidebarId: 'sidebar',
-    mainId: 'main'
+    mainId: 'main',
+    headerId: 'header'
 }
 
 showSlidebar(SelectorSidebar)
