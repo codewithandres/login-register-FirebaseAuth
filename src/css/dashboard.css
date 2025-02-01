@@ -50,6 +50,7 @@ body {
     background-color: var(--body-color);
     color: var(--text-color);
     transition: background-color .4s;
+    
 }
 
 a {
@@ -394,4 +395,22 @@ body.dark-theme {
     .left-pd {
         padding-left: 114px;
     }
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 8px;
+}
+
+.grid-col1 {
+    grid-column: span 3 / span 3;
+    grid-row: span 5 / span 5;
+}
+
+.grid-col2 {
+    grid-column: span 2 / span 2;
+    grid-row: span 5 / span 5;
+    grid-column-start: 4;
 }
