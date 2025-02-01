@@ -1,5 +1,7 @@
 import '../src/css/root.css';
 import '../src/css/dashboard.css';
+import '../src/css/searchstyle.css'
+import '../src/css/banner.style.css'
 
 // importacion de funciones de UI
 import '../src/UI/sidebarLink';
