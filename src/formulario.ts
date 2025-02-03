@@ -4,7 +4,9 @@ import { validatePassword } from '@/validation/validatePassword';
 import FunctionlinkSinUp from './handlers/linkSingUp';
 import FunctionlinkSingIn from './handlers/linkSingIn';
 
-import { formsingIn, iconEye } from './constans';
+import { formsingIn } from './constans';
+import { validateFormSingIn } from './validation/validateForm/valedateForm-singIn';
+import { changeIconEye } from './UI/changeIcon';
 
 const bottonFormSignIn = document.getElementById('botton-signIn');
 
@@ -20,37 +22,22 @@ formsingIn?.addEventListener('keyup', event => {
     if (target.id === 'password') return validatePassword(target);
 });
 
-bottonFormSignIn?.addEventListener('click', event => {
+bottonFormSignIn?.addEventListener('click', (event: Event) => {
     event.preventDefault();
 
     const { email, password } = formsingIn;
 
-    if (!validateEmail(email)) {
-        return { success: false, error: 'Infresa un email valido'}
-    }
+    const { success, error } = validateFormSingIn({ email, password });
 
-    if (!validatePassword(password)) {
-        return { success: false, error: 'Ingresa una contraseña valida'}
-    }
+    //? mostrar los errores en la ui
+    if (error) return console.log(error);
 
-    console.log(email.value, password.value);
+    // enviar la data al servidor
+    if (success) return console.log(email.value, password.value);
 });
 
 FunctionlinkSinUp();
 
 FunctionlinkSingIn();
 
-iconEye.forEach(icon => {
-    icon.addEventListener('click', () => {
-        const input = icon.previousElementSibling as HTMLInputElement;
-        if (input.type === 'password') {
-            input.type = 'text';
-            icon.classList.remove('ri-eye-off-fill');
-            icon.classList.add('ri-eye-fill');
-        } else {
-            input.type = 'password';
-            icon.classList.remove('ri-eye-fill');
-            icon.classList.add('ri-eye-off-fill');
-        }
-    });
-});
+changeIconEye();
