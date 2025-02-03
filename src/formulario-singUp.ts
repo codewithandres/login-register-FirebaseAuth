@@ -31,19 +31,19 @@ bottonFormSingUp.addEventListener('click', event => {
     const { names, email, password, RepeatPassword } = formsingUp;
 
 
-    if (!validateName(names)) {
-        console.log('error en el nombre');
+    if (!validateName(names)) { 
+        return { succes: false, error: 'Ingresa un nombre valido '} 
     }
 
     if (!validateEmail(email)) {
-        console.log('email invalido');
+        return { succes: false, error: 'Ingresa un email valido' }
     }
 
     if (!validatePassword(password)) {
-        console.log('password invalido');
+        return { succes: false, error: 'Ingresa una contraseña valida' }
     }
 
     if (!validateConformPassword({ inputConfirmPassowrd: RepeatPassword, inputPassowrd: password })) {
-        console.log('password no coinciden');
+        return { succes: false, error: 'Las contraseñas no coinciden'}
     }
 })
