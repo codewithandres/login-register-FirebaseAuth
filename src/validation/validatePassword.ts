@@ -1,5 +1,3 @@
-
-
 const validatePassword = (inputPassword: HTMLInputElement) => {
     const expRegPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
 
@@ -10,8 +8,6 @@ const validatePassword = (inputPassword: HTMLInputElement) => {
         inputPassword.closest('.form-group')?.classList.add('error');
         return false;
     }
-}
+};
 
-export {
-    validatePassword
-}
+export { validatePassword };
