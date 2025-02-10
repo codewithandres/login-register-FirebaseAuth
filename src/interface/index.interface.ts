@@ -10,5 +10,11 @@ export interface DataForm {
     password: string;
     confirmPassword?: string;
 }
+export interface FormInputs {
+    names: HTMLInputElement;
+    email: HTMLInputElement;
+    password: HTMLInputElement;
+    RepeatPassword: HTMLInputElement;
+}
 
 export type DataFormSingUp = Omit<DataForm, 'name' | 'confirmPassword'> 
