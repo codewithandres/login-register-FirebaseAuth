@@ -4,6 +4,7 @@ import { validateEmail } from './validation/validatyeEmail';
 import { validatePassword } from './validation/validatePassword';
 import { validateConformPassword } from './validation/validateConformPassword';
 import { validateForSingUp } from './validation/validateForm/validateForm-singUp';
+import type { FormInputs } from './interface/index.interface';
 
 const bottonFormSingUp = document.querySelector(
     '.botton-signUp'
@@ -27,12 +28,30 @@ formsingUp.addEventListener('keyup', (event: KeyboardEvent) => {
         });
 });
 
-bottonFormSingUp.addEventListener('click', event => {
+
+const handleFormSubmit = async (event: Event): Promise<void> => {
     event.preventDefault();
 
-    const { names, email, password, RepeatPassword } = formsingUp;
+    try {
+        const formData: FormInputs = {
+            names: formsingUp.names,
+            email: formsingUp.email,
+            password: formsingUp.password,
+            RepeatPassword: formsingUp.RepeatPassword,
+        };
 
-    const {success, error, data  } = validateForSingUp({names, email, password, RepeatPassword});
+        const { success, data, error} = validateForSingUp(formData)
+    
+        
+    if (error) return console.log(error);
 
-    console.log(success , error , data);
-});
+    console.log(data);
+
+    if (success) return alert('Formulario enviado');
+   
+} catch (error) {
+        console.log(error);
+    }
+};
+
+bottonFormSingUp.addEventListener('click', handleFormSubmit);
