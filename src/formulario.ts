@@ -1,5 +1,5 @@
-import { validateEmail } from '@/validation/validatyeEmail';
-import { validatePassword } from '@/validation/validatePassword';
+import { validateEmail } from './validation/validatyeEmail';
+import { validatePassword } from './validation/validatePassword';
 
 import FunctionlinkSinUp from './handlers/linkSingUp';
 import FunctionlinkSingIn from './handlers/linkSingIn';
